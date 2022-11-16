@@ -1,0 +1,33 @@
+{% extends "layout2.html" %}
+
+{% block content %}
+
+{% for message in get_flashed_messages() %}
+    <div class="alert alert-danger" role="alert">
+        {{ message }}
+    </div>
+{% endfor %}
+
+<h1 class="registration-login-header">Registration</h1>
+
+<form class="registration-login-form" action="/registration" method="post">
+    <label class="label-design">Username</label>
+    <div>
+        <input autocomplete="off" autofocus id="username" name="username" placeholder="Username" type="text">
+    </div>
+    <label class="label-design">E-Mail</label>
+    <div>
+        <input autocomplete="off" id="email" name="email" placeholder="E-Mail" type="email">
+    </div>
+    <label class="label-design">Password</label>
+    <div>
+        <input autocomplete="off" id="password" name="password" placeholder="Password" type="password">
+    </div>
+    <label class="label-design">Password confirmation</label>
+    <div>
+        <input autocomplete="off" id="password_confirmation" name="password_confirmation" placeholder="Password confirmation" type="password">
+    </div>
+    <button class="register-login-btn" type="submit">Register</button>
+</form>
+
+{% endblock %}

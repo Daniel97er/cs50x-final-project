@@ -1,0 +1,69 @@
+{% extends "layout2.html" %}
+
+{% block content %}
+
+    {% if session["user_id"] %}
+        <h1 id="documentation-header">Purchase documentation</h1>
+    {% else %}
+        <h1 id="documentation-header">Purchase documentation (Please log in)</h1>
+    {% endif %}
+
+    <div class="table table-stripped x-width">
+        <table class="table">
+            <thead>
+                <tr class="head-row-color">
+                  <th width=10% scope="col">#</th>
+                  <th width=16% scope="col">Item id</th>
+                  <th width=20% scope="col">Name</th>
+                  <th width=18% scope="col">Amount</th>
+                  <th width=18% scope=col>Price</th>
+                  <th scope=col>Date</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for item in transactions_db %}
+                  {% if item["transactions_count"] % 2 == 0 %}
+                    <tr class="row-color-lightblue">
+                  {% else %}
+                    <tr class="row-color-lightother">
+                  {% endif %}
+                      <th scope="row">{{ item["transactions_count"]}}</th>
+                      <td>{{ item["items_id"] }}</td>
+                      <td>{{ item["items_name"] }}</td>
+                      {% if item["items_id"] < 10 %}
+                          <td>{{ item["items_amount"] }} piece</td>
+                      {% else %}
+                          <td>{{ item["items_amount"] }} m²</td>
+                      {% endif %}
+                      <td>{{ total_price[item["transactions_count"]-1] }}€</td>
+                      <td>{{ item["transactions_date"] }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+      </div>
+
+    <style>
+        .table {
+            color: black;
+            margin: 0.5vw;
+        }
+
+        .x-width {
+          padding: 10vw;
+        }
+
+        .head-row-color {
+          color: white;
+        }
+
+        .row-color-lightblue {
+          background-color: aqua;
+        }
+
+        .row-color-lightother {
+          background-color: aquamarine;
+        }
+
+    </style>
+{% endblock %}

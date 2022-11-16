@@ -1,0 +1,53 @@
+{% extends "layout2.html" %}
+{% block content %}
+
+{% for message in get_flashed_messages() %}
+    <div class="alert alert-danger" role="alert">
+        {{ message }}
+    </div>
+{% endfor %}
+
+    <h1 id="emarket-header">E-Market</h1>
+    <br>
+    {% for item in items_db %}
+        {% if item["item_id"] == 1 %}
+            <h2 id="door-header">Doors</h2>
+            <div class="out-element">
+        {% elif item["item_id"] == 10 %}
+            <h2 id="floor-header">Floors</h2>
+            <div class="out-element">
+        {% else %}
+        <!--Easily enter more items here-->
+        {% endif %}
+                <div class="in-element">
+                    {% if item["item_id"] < 10 %}
+                        <img class="door-picture" src={{ item["link"] }} alt={{ item["name"] }}>
+                        <p class="door-info">{{ item["name"]}}</p>
+                        <p class="door-price">Price: {{ item["price"] }}€</p>
+                        <form action="/bought" method="post">
+                            <input class="amount-field" autocomplete="off" id="amount" name="amount" placeholder="Amount" required type="number">
+                            <input id="item_buy_id" name="item_buy_id" value={{ item["item_id"] }} type="hidden">
+                            <br>
+                            <button class="door-buy-btn">Buy</button>
+                        </form>
+                    {% elif item["item_id"] < 20 %}
+                        <img class="floor-picture" src={{ item["link"] }} alt={{ item["name"] }}>
+                        <p class="floor-info">{{ item["name"]}}</p>
+                        <p class="floor-price">Price 1m²: {{ item["price"] }}€</p>
+                        <form action="/bought" method="post">
+                            <input class="amount-field" autocomplete="off" id="amount" name="amount" placeholder="Amount" required type="number">
+                            <input id="item_buy_id" name="item_buy_id" value={{ item["item_id"] }} type="hidden">
+                            <br>
+                            <button class="floor-buy-btn">Buy</button>
+                        </form>
+                    {% else %}
+                    <!--Easily enter more items here-->
+                    {% endif %}
+                </div>
+        {% if item["item_id"] == 5 or item["item_id"] == 15 %}
+            </div>
+        {% else %}
+        <!--Easily enter more limis here-->
+        {% endif %}
+    {% endfor %}
+{% endblock %}

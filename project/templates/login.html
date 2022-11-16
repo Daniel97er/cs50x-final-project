@@ -1,0 +1,29 @@
+{% extends "layout2.html" %}
+
+{% block content %}
+
+{% for message in get_flashed_messages() %}
+    {% if session["user_id"] %}
+        <div class="alert alert-danger" role="alert">
+            {{ message }}
+        </div>
+    {% else %}
+        <div class="alert alert-success" role="alert">
+            {{ message }}
+        </div>
+    {% endif %}
+{% endfor %}
+
+<h1 class="registration-login-header">Login</h1>
+<form class="registration-login-form" action="/login" method="post">
+    <label class="label-design">Username</label>
+    <div>
+        <input autocomplete="off" autofocus id="username" name="username" placeholder="Username" type="text">
+    </div>
+    <label class="label-design">Password</label>
+    <div>
+        <input autocomplete="off" id="password" name="password" placeholder="Password" type="password">
+    </div>
+    <button class="register-login-btn" type="submit">Login</button>
+</form>
+{% endblock %}

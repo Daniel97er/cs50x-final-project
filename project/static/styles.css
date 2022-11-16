@@ -1,0 +1,143 @@
+body {
+    background-color: #111;
+}
+
+.errors {
+    color: red;
+    text-align: center;
+}
+
+#emarket-header {
+    margin-top: 3%;
+    color: cyan;
+    text-align: center;
+}
+
+#door-header {
+    margin: 3%;
+    color: lightblue;
+}
+
+#documentation-header {
+    margin: 3%;
+    color: orange;
+    text-align: center;
+}
+
+.registration-login-header {
+    margin: 3%;
+    color: gold;
+    text-align: center;
+}
+
+.door-picture {
+    margin: 1%; /*todo*/
+    height: 42vw;
+    width: 26vw;
+}
+
+.door-info {
+    color: lightblue;
+    font-size: 3vw;
+    margin-top: 0.4vw;
+    margin-bottom: 0.1vw
+    padding: 0.2vw;
+}
+
+.door-price {
+    color: mediumblue;
+    font-weight:bold;
+    font-size: 2.5vw;
+    margin-top: 0.1vw;
+    margin-top: 0.3vw;
+}
+
+.amount-field {
+    margin: 1vw;
+}
+
+.door-buy-btn {
+    width: 15vw;
+    height: 4vw;
+    font-size: 2vw;
+    border-radius: 2vw;
+    border-style: hidden;
+    background-image: radial-gradient(darkblue, blue, #111);
+    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+}
+
+#floor-header {
+    margin: 3%;
+    color: lightgreen;
+}
+
+
+.floor-picture {
+    height: 23vw;
+    width: 30vw;
+}
+
+.floor-info {
+    color: lightgreen;
+    font-size: 3vw;
+    margin-top: 0.4vw;
+    margin-bottom: 0.1vw
+    padding: 0.2vw;
+}
+
+.floor-price {
+    color: green;
+    font-weight:bold;
+    font-size: 2.5vw;
+    margin-top: 0.1vw;
+    margin-top: 0.3vw;
+}
+
+.floor-buy-btn {
+    width: 15vw;
+    height: 4vw;
+    font-size: 2vw;
+    border-radius: 2vw;
+    border-style: hidden;
+    background-image: radial-gradient(darkgreen, green, lightgreen);
+    text-shadow: 1px 1px 2px black, 0 0 25px green, 0 0 5px darkgreen;
+}
+
+
+
+.in-element {
+    display: inline-block;
+    margin-top: 3vw;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    margin-bottom: 1vw;
+    padding: 3vw;
+}
+.out-element {
+    text-align: center;
+    margin: 3vw;
+    margin-top: 1vw;
+    padding: 0;
+}
+
+.registration-login-form {
+    text-align: center;
+    margin: 7%;
+}
+
+.label-design {
+    color: gold;
+    font-weight: bold;
+    font-size: 130%;
+    margin-top: 2.5%;
+}
+
+.register-login-btn {
+    width: 20%;
+    height: 8%;
+    margin: 3%;
+    border: hidden;
+    border-radius: 5vw;
+    background-color: gold;
+    font-weight: bold;
+}
