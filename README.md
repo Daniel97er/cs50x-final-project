@@ -3,7 +3,7 @@
 ## Description:
 
 My Cs50x project is to simulate a floor and door online shop. I
-worked with Python, Flask Framework, Jinja Template language, HTML
+worked with Python, Flask Framework, SQL, Jinja Template language, HTML
 and CSS. Thanks to pixabay.com for the nice pictures.
 
 
