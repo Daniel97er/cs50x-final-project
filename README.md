@@ -7,6 +7,12 @@ worked with Python, Flask Framework, SQL, Jinja Template language, HTML
 and CSS. Thanks to pixabay.com for the nice pictures.
 
 
+## How to use?
+1. Open the Code with Github Codespace or other development environment
+2. Install Python if not already installed
+3. Install Python Flask Framework with the command: pip3 install flask
+4. Install flask_session with the command: pip3 install flask_session 
+
 ### app.py
 
 This is the main program where flask starts and runs.
