@@ -10,8 +10,13 @@ and CSS. Thanks to pixabay.com for the nice pictures.
 ## How to use?
 1. Open the Code with Github Codespace or other development environment
 2. Install Python if not already installed
-3. Install Python Flask Framework with the command: pip3 install flask
-4. Install flask_session with the command: pip3 install flask_session 
+3. Go in the project directory with the command: cd project
+4. Install Python Flask Framework with the command: pip3 install flask
+5. Install flask_session with the command: pip3 install flask_session
+6. Install cs50 SQL with the command: pip3 install cs50
+7. Start the web application with the command: flask run
+8. Open the web application with go to PORTS right of TERMINAL
+   and open in Browser mostly Port 8000
 
 ### app.py
 
